@@ -31,7 +31,7 @@ public class BeanMocker implements Mocker<Object> {
       Object result = null;
       // 普通类型直接生成实例
       if(this.clazz.getName().equals("java.time.LocalDateTime")){
-        result = new LocalDateTimeMocker().mock();
+        result = new LocalDateTimeMocker().mock(mockConfig);
       }
       else {
         result = clazz.newInstance();

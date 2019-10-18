@@ -1,6 +1,5 @@
 package com.mock;
 
-import com.mock.bean.*;
 import com.mock.bean.circular.AXB;
 import com.mock.bean.enums.DayEnum;
 import com.mock.util.JsonUtil;
@@ -10,7 +9,6 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.*;
 
 import static org.junit.Assert.*;
 

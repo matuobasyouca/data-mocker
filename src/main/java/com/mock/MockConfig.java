@@ -1,18 +1,7 @@
 package com.mock;
 
 
-import com.mock.mocker.BigDecimalMocker;
-import com.mock.mocker.BigIntegerMocker;
-import com.mock.mocker.BooleanMocker;
-import com.mock.mocker.ByteMocker;
-import com.mock.mocker.CharacterMocker;
-import com.mock.mocker.DateMocker;
-import com.mock.mocker.DoubleMocker;
-import com.mock.mocker.FloatMocker;
-import com.mock.mocker.IntegerMocker;
-import com.mock.mocker.LongMocker;
-import com.mock.mocker.ShortMocker;
-import com.mock.mocker.StringMocker;
+import com.mock.mocker.*;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

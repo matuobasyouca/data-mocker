@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mock</groupId>
-    <artifactId>mock</artifactId>
-    <version>1.0.0</version>
+    <groupId>cn.vv.web.merchantbiz</groupId>
+    <artifactId>data-mocker</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -14,23 +14,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <java.version>1.8</java.version>
     </properties>
-
-    <!-- 使用阿里 maven 库 -->
-    <repositories>
-        <repository>
-            <id>ali-maven</id>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>fail</checksumPolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-
 
     <dependencies>
         <dependency>
@@ -75,4 +58,63 @@
     </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>vv-fw-releases</id>
+            <name>vv Repository</name>
+            <url>http://172.16.6.11:8081/repository/vv-fw-releases/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>vv-fw-snapshots</id>
+            <name>vv Repository</name>
+            <url>http://172.16.6.11:8081/repository/vv-fw-snapshots/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>false</enabled>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>vv-repository</id>
+            <name>vv Repository</name>
+            <url>http://172.16.6.11:8081/repository/vv-fw-public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <!--定义snapshots库和releases库的nexus地址-->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>vv-fw-snapshots</id>
+            <url>http://172.16.6.11:8081/repository/vv-fw-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>vv-fw-releases</id>
+            <url>http://172.16.6.11:8081/repository/vv-fw-releases/</url>
+        </repository>
+    </distributionManagement>
 </project>
